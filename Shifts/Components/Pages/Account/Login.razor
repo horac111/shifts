@@ -1,0 +1,29 @@
+﻿ @page "/Account/Log-In"
+
+
+<PageTitle>Přihlášení</PageTitle>
+
+<h1>Přihlášení</h1>
+<FluentStack HorizontalAlignment="HorizontalAlignment.Center" >
+    <FluentCard Width="250px">
+        <FluentStack Orientation="Orientation.Vertical">
+            <FluentTextField @bind-Value="@Username" Autofocus="true" Label="Uživatelské jméno" AutoComplete="username" Required="true">
+                <FluentIcon Value="@(new Icons.Regular.Size16.Person())" Slot="start" Color="Color.Neutral" />
+            </FluentTextField>
+            <FluentTextField @bind-Value="@Password" TextFieldType="@(ShowPassword ? TextFieldType.Text : TextFieldType.Password)" Label="Heslo" Required="true">
+                @if (ShowPassword)
+                {
+                    <FluentIcon Value="@(new Icons.Regular.Size16.Eye())" OnClick="@OnShowPasswordClick" Slot="start" Color="Color.Neutral" />
+                }
+                else
+                {
+                    <FluentIcon Value="@(new Icons.Regular.Size16.EyeOff())" OnClick="@OnShowPasswordClick" Slot="start" Color="Color.Neutral" />
+                }
+            </FluentTextField>
+            <FluentAnchor Href="Account/ForgotPassword" Appearance="Appearance.Hypertext">Zapomenuté heslo?</FluentAnchor>
+            <FluentStack HorizontalAlignment="HorizontalAlignment.End">
+                <FluentButton Appearance="Appearance.Accent" Loading="@SigningIn" OnClick="@LoginUser">Přihlásit se</FluentButton>
+            </FluentStack>
+        </FluentStack>
+    </FluentCard>
+</FluentStack>

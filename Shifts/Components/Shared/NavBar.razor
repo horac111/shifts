@@ -1,0 +1,49 @@
+﻿@using Microsoft.FluentUI.AspNetCore.Components
+@using System.Security.Claims
+
+@rendermode InteractiveServer
+
+@inject IHttpContextAccessor httpContextAccessor;
+
+<FluentDesignTheme @bind-Mode="@Mode"
+                   @bind-OfficeColor="@OfficeColor"
+                   StorageName="theme" OnLuminanceChanged="@OnLumienceChanged" />
+
+<FluentGrid Justify="JustifyContent.SpaceBetween" Style="width: 100%">
+    <FluentGridItem>
+        <FluentStack>
+            <FluentButton BackgroundColor="rgba(0, 0, 0, 0)" OnClick="@(() => OnNavbarClicked())">
+                <FluentIcon Value="@(new Icons.Filled.Size32.Home())" Color="@Color.Fill" />
+            </FluentButton>
+            @foreach (var item in NavbarItemProvider.GetItems())
+            {
+                @if (item.NeededRole is null || (httpContextAccessor.HttpContext?.User.HasClaim(x => x.Type == ClaimTypes.Role && x.Value == item.NeededRole.ToString()) ?? false))
+                {
+                    <FluentButton OnClick="@(() => OnNavbarClicked(item.Route))"
+                                  Appearance="@(Url == item.Route ? Appearance.Lightweight : Appearance.Outline)">
+                        @item.DisplayName
+                    </FluentButton>
+                }
+            }
+        </FluentStack>
+    
+    </FluentGridItem>
+
+    <FluentGridItem>
+        <FluentStack Orientation="Orientation.Horizontal">
+            <FluentSelect Items="@(Enum.GetValues<OfficeColor>().Select(i => (OfficeColor?)i))"
+                          @bind-SelectedOption="@OfficeColor" />
+            <FluentButton Appearance="Appearance.Neutral" @onclick="OnClicked">
+                @if (DarkMode)
+                {
+                    <FluentIcon Value="@(new Icons.Filled.Size24.WeatherSunny())" Color="Color.Accent" />
+                }
+                else
+                {
+                    <FluentIcon Value="@(new Icons.Filled.Size24.WeatherMoon())" Color="Color.Accent" />
+                }
+            </FluentButton>
+        </FluentStack>
+    </FluentGridItem>
+</FluentGrid>
+

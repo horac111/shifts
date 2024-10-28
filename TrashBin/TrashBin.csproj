@@ -1,0 +1,160 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Account\Pages\AccessDenied.razor" />
+    <None Remove="Account\Pages\ConfirmEmail.razor" />
+    <None Remove="Account\Pages\ConfirmEmailChange.razor" />
+    <None Remove="Account\Pages\ExternalLogin.razor" />
+    <None Remove="Account\Pages\ForgotPassword.razor" />
+    <None Remove="Account\Pages\ForgotPasswordConfirmation.razor" />
+    <None Remove="Account\Pages\InvalidPasswordReset.razor" />
+    <None Remove="Account\Pages\InvalidUser.razor" />
+    <None Remove="Account\Pages\Lockout.razor" />
+    <None Remove="Account\Pages\Login.razor" />
+    <None Remove="Account\Pages\LoginWith2fa.razor" />
+    <None Remove="Account\Pages\LoginWithRecoveryCode.razor" />
+    <None Remove="Account\Pages\Manage\ChangePassword.razor" />
+    <None Remove="Account\Pages\Manage\DeletePersonalData.razor" />
+    <None Remove="Account\Pages\Manage\Disable2fa.razor" />
+    <None Remove="Account\Pages\Manage\Email.razor" />
+    <None Remove="Account\Pages\Manage\EnableAuthenticator.razor" />
+    <None Remove="Account\Pages\Manage\ExternalLogins.razor" />
+    <None Remove="Account\Pages\Manage\GenerateRecoveryCodes.razor" />
+    <None Remove="Account\Pages\Manage\Index.razor" />
+    <None Remove="Account\Pages\Manage\PersonalData.razor" />
+    <None Remove="Account\Pages\Manage\ResetAuthenticator.razor" />
+    <None Remove="Account\Pages\Manage\SetPassword.razor" />
+    <None Remove="Account\Pages\Manage\TwoFactorAuthentication.razor" />
+    <None Remove="Account\Pages\Manage\_Imports.razor" />
+    <None Remove="Account\Pages\Register.razor" />
+    <None Remove="Account\Pages\RegisterConfirmation.razor" />
+    <None Remove="Account\Pages\ResendEmailConfirmation.razor" />
+    <None Remove="Account\Pages\ResetPassword.razor" />
+    <None Remove="Account\Pages\ResetPasswordConfirmation.razor" />
+    <None Remove="Account\Pages\_Imports.razor" />
+    <None Remove="Account\Shared\AccountLayout.razor" />
+    <None Remove="Account\Shared\ExternalLoginPicker.razor" />
+    <None Remove="Account\Shared\ManageLayout.razor" />
+    <None Remove="Account\Shared\ManageNavMenu.razor" />
+    <None Remove="Account\Shared\ShowRecoveryCodes.razor" />
+    <None Remove="Account\Shared\StatusMessage.razor" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Account\Pages\AccessDenied.razor">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Include="Account\Pages\ConfirmEmail.razor">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Include="Account\Pages\ConfirmEmailChange.razor">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Include="Account\Pages\ExternalLogin.razor">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Include="Account\Pages\ForgotPassword.razor">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Include="Account\Pages\ForgotPasswordConfirmation.razor">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Include="Account\Pages\InvalidPasswordReset.razor">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Include="Account\Pages\InvalidUser.razor">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Include="Account\Pages\Lockout.razor">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Include="Account\Pages\LoginWith2fa.razor">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Include="Account\Pages\LoginWithRecoveryCode.razor">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Include="Account\Pages\Manage\ChangePassword.razor">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Include="Account\Pages\Manage\DeletePersonalData.razor">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Include="Account\Pages\Manage\Disable2fa.razor">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Include="Account\Pages\Manage\Email.razor">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Include="Account\Pages\Manage\EnableAuthenticator.razor">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Include="Account\Pages\Manage\ExternalLogins.razor">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Include="Account\Pages\Manage\GenerateRecoveryCodes.razor">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Include="Account\Pages\Manage\Index.razor">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Include="Account\Pages\Manage\PersonalData.razor">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Include="Account\Pages\Manage\ResetAuthenticator.razor">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Include="Account\Pages\Manage\SetPassword.razor">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Include="Account\Pages\Manage\TwoFactorAuthentication.razor">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Include="Account\Pages\Manage\_Imports.razor">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Include="Account\Pages\Register.razor">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Include="Account\Pages\RegisterConfirmation.razor">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Include="Account\Pages\ResendEmailConfirmation.razor">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Include="Account\Pages\ResetPassword.razor">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Include="Account\Pages\ResetPasswordConfirmation.razor">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Include="Account\Pages\_Imports.razor">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Include="Account\Shared\AccountLayout.razor">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Include="Account\Shared\ExternalLoginPicker.razor">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Include="Account\Shared\ManageLayout.razor">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Include="Account\Shared\ManageNavMenu.razor">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Include="Account\Shared\ShowRecoveryCodes.razor">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Include="Account\Shared\StatusMessage.razor">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+  </ItemGroup>
+
+</Project>
